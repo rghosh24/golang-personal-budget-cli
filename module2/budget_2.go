@@ -33,7 +33,7 @@ func init() {
 
 // CurrentCost returns how much we've added
 // to the current budget
-func (b Budget) CurrentCost() float32 {
+func (b *Budget) CurrentCost() float32 {
 	var sum float32
 	for _, item := range b.Items {
 		sum += item.Price
